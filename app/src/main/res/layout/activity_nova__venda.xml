@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="Nome:"
+                app:layout_constraintBottom_toBottomOf="@+id/txtNome"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtNome" />
+
+            <Spinner
+                android:id="@+id/spinnerClientes"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/txtNome"
+                app:layout_constraintEnd_toEndOf="@id/txtNome"
+                app:layout_constraintStart_toStartOf="@id/txtNome"
+                app:layout_constraintTop_toTopOf="@id/txtNome" />
+
+            <EditText
+                android:id="@+id/txtNome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:ems="6"
+                android:hint="Nome do Cliente"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@id/botAddCliente"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtNomeEncomenda"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:text="Nome do Cliente"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerClientes"
+                app:layout_constraintEnd_toStartOf="@id/botAddCliente"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/botAddCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="botNovoCliente"
+                app:layout_constraintBottom_toBottomOf="@id/spinnerClientes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/spinnerClientes"
+                app:srcCompat="@drawable/ic_add_circle_outline_black_24dp" />
+
+            <TextView
+                android:id="@+id/lblDataVenda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data da Venda:"
+                app:layout_constraintBottom_toBottomOf="@+id/txtDataVenda"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toTopOf="@+id/txtDataVenda" />
+
+            <Button
+                android:id="@+id/txtDataVenda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:onClick="dataCalendario"
+                android:text="00/00/0000"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/lblDataVenda"
+                app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:text="Produtos:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtDataVenda" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblNome" />
+
+            <TextView
+                android:id="@+id/lblNome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Nome do Produto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/lblQtd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Qtd"
+                app:layout_constraintEnd_toStartOf="@+id/lblPreco"
+                app:layout_constraintTop_toTopOf="@+id/lblNome" />
+
+            <TextView
+                android:id="@+id/lblPreco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:text="Preço"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lblQtd" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lstProdsVenda"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblNome">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/botAddProd"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:background="#D1D35ED0"
+                android:onClick="botAddProd"
+                android:text="Adicionar Produtos"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lstProdsVenda" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="Total:"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtValTotVenda2"
+                app:layout_constraintStart_toEndOf="@+id/botAddProd"
+                app:layout_constraintTop_toTopOf="@+id/txtValTotVenda2" />
+
+            <TextView
+                android:id="@+id/txtValTotVenda2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="R$00.00"
+                android:textColor="@color/corDinheiro"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/botAddProd"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toTopOf="@id/botAddProd" />
+
+            <TextView
+                android:id="@+id/lblNumParc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nº de Parcelas: "
+                app:layout_constraintStart_toStartOf="@id/botAddProd"
+                app:layout_constraintTop_toTopOf="@+id/txtParcelas" />
+
+            <Spinner
+                android:id="@+id/txtParcelas"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toEndOf="@+id/lblNumParc"
+                app:layout_constraintTop_toBottomOf="@id/botAddProd" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutParcela1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtParcelas">
+
+                <TextView
+                    android:id="@+id/lblParcela1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="1º Parcela:"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/botParcela1"
+                    app:layout_constraintEnd_toStartOf="@+id/botParcela1"
+                    app:layout_constraintTop_toTopOf="@+id/botParcela1" />
+
+                <Button
+                    android:id="@+id/botParcela1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:onClick="dataCalendario"
+                    android:text="00/00/0000"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtValParc1"
+                    app:layout_constraintEnd_toStartOf="@+id/edtValParc1"
+                    app:layout_constraintTop_toTopOf="@+id/edtValParc1" />
+
+                <EditText
+                    android:id="@+id/edtValParc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:ems="4"
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/edtValParc1"
+                    app:layout_constraintTop_toTopOf="@+id/edtValParc1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutParcela2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutParcela1">
+
+                <TextView
+                    android:id="@+id/lblParcela2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="2º Parcela:"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/botParcela2"
+                    app:layout_constraintEnd_toStartOf="@+id/botParcela2"
+                    app:layout_constraintTop_toTopOf="@+id/botParcela2" />
+
+                <Button
+                    android:id="@+id/botParcela2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:onClick="dataCalendario"
+                    android:text="00/00/0000"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtValParc2"
+                    app:layout_constraintEnd_toStartOf="@+id/edtValParc2"
+                    app:layout_constraintTop_toTopOf="@+id/edtValParc2" />
+
+                <EditText
+                    android:id="@+id/edtValParc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:ems="4"
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/edtValParc2"
+                    app:layout_constraintTop_toTopOf="@id/edtValParc2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutParcela3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutParcela2">
+
+                <TextView
+                    android:id="@+id/lblParcela3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="3º Parcela:"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/botParcela3"
+                    app:layout_constraintEnd_toStartOf="@+id/botParcela3"
+                    app:layout_constraintTop_toTopOf="@+id/botParcela3" />
+
+                <Button
+                    android:id="@+id/botParcela3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:onClick="dataCalendario"
+                    android:text="00/00/0000"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtValParc3"
+                    app:layout_constraintEnd_toStartOf="@+id/edtValParc3"
+                    app:layout_constraintTop_toTopOf="@+id/edtValParc3" />
+
+                <EditText
+                    android:id="@+id/edtValParc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:ems="4"
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/edtValParc3"
+                    app:layout_constraintTop_toTopOf="@id/edtValParc3" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

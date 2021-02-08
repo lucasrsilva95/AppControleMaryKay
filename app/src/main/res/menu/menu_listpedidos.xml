@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.carteiraclientes2.MainActivity">
+
+    <item
+        android:icon="@drawable/ic_sort_white_24dp"
+        android:menuCategory="alternative"
+        android:title="Ordenar"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/ordenar_datas"
+                android:title="Data do Pedido: \u2193" />
+            <item
+                android:id="@+id/ordenar_custo"
+                android:title="Preço de Custo: \u2191" />
+            <item
+                android:id="@+id/ordenar_valbruto"
+                android:title="Valor Bruto: \u2191" />
+            <item
+                android:id="@+id/ordenar_desconto"
+                android:title="Desconto %: \u2191" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prodLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lblNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:text="Nome: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtNomeProd" />
+
+        <TextView
+            android:id="@+id/txtNomeProd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:text="Nome do Produto"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/txtSifrao"
+            app:layout_constraintStart_toEndOf="@id/lblNome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Codigo: "
+            app:layout_constraintStart_toStartOf="@+id/lblNome"
+            app:layout_constraintTop_toTopOf="@id/txtCodigo" />
+
+        <TextView
+            android:id="@+id/txtCodigo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="00056738"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/lblCodigo"
+            app:layout_constraintTop_toBottomOf="@id/txtNomeProd" />
+
+        <TextView
+            android:id="@+id/lblQtdVendida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qtd Vendida: "
+            app:layout_constraintStart_toStartOf="@+id/lblNome"
+            app:layout_constraintTop_toTopOf="@id/txtQtdVendida" />
+
+        <TextView
+            android:id="@+id/txtQtdVendida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="00"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lblQtdVendida"
+            app:layout_constraintTop_toBottomOf="@id/txtCodigo" />
+
+        <TextView
+            android:id="@+id/txtSifrao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$"
+            android:textColor="@color/corDinheiro"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/txtPreco"
+            app:layout_constraintTop_toTopOf="@id/txtPreco" />
+
+        <TextView
+            android:id="@+id/txtPreco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="000.00"
+            android:textColor="@color/corDinheiro"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblUltVenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Última Venda:"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/txtUltVenda"
+            app:layout_constraintEnd_toStartOf="@+id/txtUltVenda"
+            app:layout_constraintTop_toTopOf="@+id/txtUltVenda" />
+
+        <TextView
+            android:id="@+id/txtUltVenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="00/00/0000"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSifrao" />
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="442dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

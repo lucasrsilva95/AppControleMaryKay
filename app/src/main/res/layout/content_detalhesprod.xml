@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Código: "
+                app:layout_constraintBottom_toBottomOf="@+id/txtCodigo"
+                app:layout_constraintEnd_toStartOf="@+id/txtCodigo"
+                app:layout_constraintTop_toTopOf="@+id/txtCodigo" />
+
+            <TextView
+                android:id="@+id/txtCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="00000000"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:text="Nome"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lapis de Olho Azul"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="@+id/lblNome"
+                app:layout_constraintTop_toBottomOf="@+id/lblNome" />
+
+            <TextView
+                android:id="@+id/lblCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Categoria"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/txtNome"
+                app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+            <TextView
+                android:id="@+id/txtCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lápis de Olho"
+                android:textColor="#51002D"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="@+id/lblCategoria"
+                app:layout_constraintTop_toBottomOf="@+id/lblCategoria" />
+
+            <TextView
+                android:id="@+id/lblPreco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preço"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/txtPreco"
+                app:layout_constraintTop_toTopOf="@+id/lblCategoria" />
+
+            <TextView
+                android:id="@+id/txtPreco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:text="R$150.50"
+                android:textColor="@color/corDinheiro"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblPreco" />
+
+
+            <TextView
+                android:id="@+id/lblProdsVendidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Vendidos: "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/lblCategoria"
+                app:layout_constraintTop_toBottomOf="@id/txtDetalhes" />
+
+            <TextView
+                android:id="@+id/txtProdsVendidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lblProdsVendidos"
+                app:layout_constraintStart_toEndOf="@+id/lblProdsVendidos"
+                app:layout_constraintTop_toTopOf="@+id/lblProdsVendidos" />
+
+            <TextView
+                android:id="@+id/lblQuantEstoque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Em Estoque: "
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lblProdsVendidos"
+                app:layout_constraintEnd_toStartOf="@+id/txtQuantEstoque"
+                app:layout_constraintTop_toTopOf="@+id/lblProdsVendidos" />
+
+            <TextView
+                android:id="@+id/txtQuantEstoque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lblQuantEstoque"
+                app:layout_constraintEnd_toEndOf="@+id/txtPreco"
+                app:layout_constraintTop_toTopOf="@+id/lblQuantEstoque" />
+
+            <TextView
+                android:id="@+id/lblDetalhes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Detalhes"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/txtCategoria"
+                app:layout_constraintTop_toBottomOf="@id/txtCategoria" />
+
+            <TextView
+                android:id="@+id/txtDetalhes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Lápis de Olho Azul Turquesa coloração CD0025 toque leve"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/lblDetalhes"
+                app:layout_constraintTop_toBottomOf="@+id/lblDetalhes" />
+
+            <TextView
+                android:id="@+id/lblHistVendas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="Histórico de Vendas"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtProdsVendidos" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/darkgray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblHistVendas" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lstHistVendasProd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+            <TextView
+                android:id="@+id/lblHistPedidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="60dp"
+                android:text="Histórico de Pedidos"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lstHistVendasProd" />
+
+            <View
+                android:id="@+id/dividerPedidos"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/darkgray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblHistPedidos" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lstHistPedidosProd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerPedidos" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

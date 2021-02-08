@@ -1,0 +1,52 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <string-array name="act_ini_entries">
+        <item>Vendas</item>
+        <item>Produtos</item>
+        <item>Clientes</item>
+        <item>Encomendas</item>
+        <item>Débitos</item>
+        <item>Pedidos</item>
+        <item>Estoque</item>
+    </string-array>
+
+    <string-array name="act_ini_values">
+        <item>Vendas</item>
+        <item>Produtos</item>
+        <item>Clientes</item>
+        <item>Encomendas</item>
+        <item>Débitos</item>
+        <item>Pedidos</item>
+        <item>Estoque</item>
+    </string-array>
+
+    <string-array name="tipo_arquivo_entries">
+        <item>Imagem</item>
+        <item>Pdf</item>
+    </string-array>
+
+    <string-array name="tipo_arquivo_values">
+        <item>Imagem</item>
+        <item>Pdf</item>
+    </string-array>
+
+    <string-array name="tipo_backup_entries">
+        <item>4 Arquivos</item>
+        <item>1 Arquivo</item>
+    </string-array>
+
+    <string-array name="tipo_backup_values">
+        <item>4 Arquivos</item>
+        <item>1 Arquivo</item>
+    </string-array>
+</resources>

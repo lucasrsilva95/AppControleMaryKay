@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prodLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/lblNome"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="Nome:"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/txtNome"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtNome" />
+
+            <TextView
+                android:id="@+id/txtNome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:text="Nome"
+                android:textColor="#1C1C1C"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lblNome"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text="Quantidade:"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtQuant"
+                app:layout_constraintStart_toStartOf="@+id/lblNome"
+                app:layout_constraintTop_toTopOf="@+id/txtQuant" />
+
+            <TextView
+                android:id="@+id/txtQuant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#1C1C1C"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+            <TextView
+                android:id="@+id/lblUltPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text="Data Pedido:"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/txtUltPedido"
+                app:layout_constraintEnd_toStartOf="@+id/txtUltPedido"
+                app:layout_constraintTop_toTopOf="@id/txtUltPedido" />
+
+            <TextView
+                android:id="@+id/txtUltPedido"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:foregroundGravity="center_vertical|center_horizontal"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="00/00/0000"
+                android:textColor="#1C1C1C"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtQuant" />
+
+            <View
+                android:id="@+id/divider16"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#4C4C4C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Dados do Revendedor">
+
+        <EditTextPreference
+            app:key="nomeRevendedor"
+            app:title="Nome do Revendedor"
+            app:icon="@drawable/ic_person_black_24dp"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Pagina Inicial">
+
+        <ListPreference
+            app:defaultValue="Vendas"
+            app:entries="@array/act_ini_entries"
+            app:entryValues="@array/act_ini_values"
+            app:icon="@drawable/ic_looks_one_black_24dp"
+            app:key="act_ini"
+            app:title="Pagina Inicial"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Notificações">
+
+        <SwitchPreference
+            app:defaultValue="true"
+            app:icon="@drawable/ic_notifications_black_24dp"
+            app:key="switch_notific"
+            app:title="Notificar debitos do dia" />
+        <Preference
+            app:defaultValue="09:00"
+            app:icon="@drawable/ic_access_time_black_24dp"
+            app:dependency="switch_notific"
+            app:key="horaNotif"
+            app:summary="09:00"
+            app:title="Horário da Notificação" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Compartilhar Venda">
+
+        <ListPreference
+            app:defaultValue="Imagem"
+            app:entries="@array/tipo_arquivo_entries"
+            app:entryValues="@array/tipo_arquivo_values"
+            app:icon="@drawable/ic_share_black_24dp"
+            app:key="act_arquivo"
+            app:title="Tipo de Arquivo que será compartilhado"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Backup">
+
+<!--        <ListPreference-->
+<!--            app:defaultValue="1 Arquivo"-->
+<!--            app:entries="@array/tipo_backup_entries"-->
+<!--            app:entryValues="@array/tipo_backup_values"-->
+<!--            app:key="tipo_backup"-->
+<!--            app:title="Tipo de Arquivo de backup"-->
+<!--            app:useSimpleSummaryProvider="true" />-->
+
+<!--        <Preference-->
+<!--            app:key="subsDB"-->
+<!--            app:title="Substituir 4 db por 1"/>-->
+        <Preference
+            app:icon="@drawable/ic_baseline_cloud_upload_24"
+            app:key="salvar_backup"
+            app:title="Realizar Backup dos Dados"
+            app:summary="O arquivo de backup será salvo na pasta ControleMK/Backups no armazenamento interno" />
+
+        <Preference
+            app:icon="@drawable/ic_baseline_cloud_download_24"
+            app:key="carregar_backup"
+            app:title="Carregar Backup dos Dados"
+            app:summary="O arquivo de backup deve estar salvo na pasta ControleMK/Backups no armazenamento interno" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

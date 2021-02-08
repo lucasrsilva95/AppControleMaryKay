@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/vendas"
+        android:icon="@drawable/ic_monetization_on_black_24dp"
+        android:title="Vendas" />
+    <item
+        android:id="@+id/produtos"
+        android:icon="@drawable/ic_format_list_bulleted_black_24dp"
+        android:title="Produtos" />
+    <item
+        android:id="@+id/clientes"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="Clientes" />
+    <item
+        android:id="@+id/encomendas"
+        android:icon="@drawable/ic_assignment_black_24dp"
+        android:title="Encomendas" />
+    <item
+        android:id="@+id/debitos"
+        android:icon="@drawable/ic_money_off_white_24dp"
+        android:title="Débitos" />
+    <item
+        android:id="@+id/pedidos"
+        android:icon="@drawable/ic_assignment_returned_white_24dp"
+        android:title="Pedidos" />
+    <item
+        android:id="@+id/estoque"
+        android:icon="@drawable/ic_store_black_24dp"
+        android:title="Estoque" />
+    <item
+        android:id="@+id/config"
+        android:icon="@drawable/ic_settings_white_24dp"
+        android:title="Configurações" />
+</menu>
